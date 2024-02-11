@@ -1,0 +1,133 @@
+body {
+    background-color: rgb(18, 150, 150);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+hr {
+    border: 2px solid white;
+}
+input::placeholder {
+    color: white;
+}
+a {
+    text-decoration: none;
+}
+table {
+    width: 100%;
+    text-align: left;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+table th, tr {
+    border: 2px solid white;
+    padding: 5px;
+}
+select {
+    width: 50%;
+    height: 25px;
+    border-radius: 10px;
+    outline: none;
+}
+.text {
+    background: none;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 400px;
+    height: 150px;
+    font-size: 20px;
+    color: white;
+    resize: vertical;
+}
+.btn-danger {
+    padding: 10px;
+    background-color: red;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.btn-warning {
+    padding: 10px;
+    background-color: orange;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 5%;
+}
+.search {
+    background: none;
+    width: 400px;
+    color: white;
+    border: none;
+    border-bottom: 2px solid white;
+    height: 30px;
+    font-size: 25px;
+    outline: none;
+}
+.nameInput {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.inpt {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+.btn {
+    background: none;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 250px;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+}
+.btnA {
+    background: none;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+.client {
+    width: 75%;
+    margin: 0 auto;
+}
+.box {
+    border-radius: 15px;
+    border: 3px solid white;
+}
+.box h2 {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+.filter {
+    background: none;
+    border-radius: 15px;
+    border: 2px solid white;
+    width: 90px;
+    color: white;
+    height: 25px;
+    font-size: 15px;
+}
+.labelFilter {
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

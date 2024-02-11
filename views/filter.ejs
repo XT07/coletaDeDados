@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Cliente</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/style.css?v=1.0" />
+    </head>
+    <body>
+    <div>
+        <div class="client">
+            <h1>Clientes || <a class="btnA" href="/">adicionar novo cliente</a></h1>
+            <form class="searchForm" method="post" action="/clients/filter">
+                <label class="labelFilter" for="monthSelect">Filtrar por mês:</label>
+                <select id="monthSelect" name="selectMonth">
+                    <% months.forEach((month) => { %>
+                        <option value="<%= month.position %>"><%= month.name %></option>
+                    <% }); %>
+                </select>
+                <button class="filter">Filtrar</button>
+            </form>
+            <a href="/clients"><button class="filter">Ver tudo</button></a><br><br>
+            <table>
+                <theader>
+                    <tr>
+                        <th>Nome:</th>
+                        <th>E-mail:</th>
+                        <th>Telefone:</th>
+                        <th>Aniversário:</th>
+                        <th>Observação:</th>
+                        <th>Ações:</th>
+                    </tr>
+                </theader>
+                <tbody>
+                    <% client.forEach((client)=> { %>
+                        <tr>
+                            <th>
+                                <%= client.name %>
+                            </th>
+                            <th>
+                                <%= client.email %>
+                            </th>
+                            <th>
+                                <%= client.tel %>
+                            </th>
+                            <th>
+                                <%= client.birth %>
+                            </th>
+                            <th>
+                                <%= client.obs %>
+                            </th>
+                            <th style="display: flex;">
+                                <form method="post" action="/clients/delet" onsubmit="preventDelet(event, this)">
+                                    <input type="hidden" name="id" value="<%= client.id %>">
+                                    <button class="btn-danger">Deletar</button>
+                                </form>
+                                <form method="post" action="/clients/edit">
+                                    <input type="hidden" name="id" value="<%= client.id %>">
+                                    <button class="btn-warning">Editar</button>
+                                </form>
+                            </th>
+                        </tr>
+                        <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        function search(e, form) {
+            e.preventDefault();
+            console.log("Form não enviado")
+        }
+
+        function preventDelet(e, form){
+            e.preventDefault();
+            const confirmDelet = confirm("Quer deletar este cliente ?");
+
+            if(confirmDelet == true){
+                form.submit()
+            }else{}
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<%- include("./partials/header.ejs") %>
+        <div class="container">
+            <h1>Cadastrar cliente</h1>
+            <form method="post" action="savedata">
+                <label class="nameInput">Nome</label><br>
+                <input type="text" class="inpt" name="name"><br><br>
+
+                <label class="nameInput">E-mail</label><br>
+                <input type="email" class="inpt" name="email"><br><br>
+
+                <label class="nameInput">Telefone</label><br>
+                <input type="tel" class="inpt" name="tel" placeholder="(47)98888-8888"><br><br>
+
+                <label class="nameInput">Data de aniversário</label><br>
+                <input type="text" class="inpt" name="birth" placeholder="DD/MM/YYYY"><br><br>
+
+                <label for="obs">Observasão</label><br>
+                <textarea id="obs" class="text" name="obs"></textarea><br><br>
+
+                <button type="submit" class="btn" >Salvar</button>
+                <br><br>
+            </form>
+            <a href="clients"><button class="btn">Clientes</button></a>
+        </div>
+    </body>
+</html>

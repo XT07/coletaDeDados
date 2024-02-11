@@ -1,0 +1,29 @@
+<%- include("./partials/header.ejs") %>
+        <div class="container">
+            <h1>Registrar mes</h1>
+            <form method="post" action="months/save">
+                <label class="nameInput">Nome</label><br>
+                <input type="text" class="inpt" name="name"><br><br>
+
+                <select name="position">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select><br><br>
+
+                <button type="submit" class="btn" >Salvar</button>
+                <br><br>
+            </form>
+            <a href="/clients"><button class="btn">Clientes</button></a>
+        </div>
+    </body>
+</html>
